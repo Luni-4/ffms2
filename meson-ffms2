@@ -1,0 +1,6 @@
+export PKG_CONFIG_PATH=/home/mik/Documenti/ffmpeg-dir/lib/pkgconfig:$PKG_CONFIG_PATH
+meson build_windows \
+      -Ddefault_library=static \
+      --buildtype release \
+      --cross-file cross_mingw_x86_64.txt
+ninja -C build_windows
